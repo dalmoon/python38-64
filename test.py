@@ -25,7 +25,7 @@ while True:
             j = 6000/i # 매수주문수량
             upbit.sell_limit_order("KRW-ETH", e, h)
             upbit.buy_limit_order("KRW-ETH", i, j)
-            time.sleep(0.01)
+            time.sleep(0.001)
             if 2 == len(upbit.get_order("KRW-ETH")):
                 a = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
                 b = upbit.get_order("KRW-ETH")[1]["uuid"] # 매도 UUID
@@ -44,7 +44,7 @@ while True:
             m = 6000/n # 매수주문수량
             upbit.sell_limit_order("KRW-ETH", k, l)
             upbit.buy_limit_order("KRW-ETH", n, m)
-            time.sleep(0.01)
+            time.sleep(0.001)
             if 2 == len(upbit.get_order("KRW-ETH")):
                 a = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
                 b = upbit.get_order("KRW-ETH")[1]["uuid"] # 매도 UUID
