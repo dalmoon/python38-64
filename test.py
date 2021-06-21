@@ -53,4 +53,4 @@ while True:
                 a = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
                 b = upbit.get_order("KRW-ETH", state="done")[0]["uuid"]
                 #print("바로 체결?")
-    time.sleep(0.01)
+    time.sleep(0.001)
