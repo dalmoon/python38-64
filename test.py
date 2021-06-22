@@ -31,8 +31,9 @@ while True:
                 #print("uuid 2개")
             else:
                 a = upbit.get_order("KRW-ETH", state="done")[0]["uuid"]
-                b = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
-                #print("바로 체결?")
+                if 1 == len(upbit.get_order("KRW-ETH")):
+                    b = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
+                    #print("바로 체결?")
         elif b == upbit.get_order("KRW-ETH")[0]["uuid"]:
             #print("b에 들어옴")
             upbit.cancel_order(b)
@@ -50,6 +51,7 @@ while True:
                 #print("uuid 2개")
             else:
                 a = upbit.get_order("KRW-ETH", state="done")[0]["uuid"]
-                b = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
-                #print("바로 체결?")
+                if 1 == len(upbit.get_order("KRW-ETH")):
+                    b = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
+                    #print("바로 체결?")
     #time.sleep(0.001)
