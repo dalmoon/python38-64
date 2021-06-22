@@ -1,8 +1,8 @@
 import pyupbit
 import time
 
-access = ""          # 본인 값으로 변경
-secret = ""          # 본인 값으로 변경
+access = "tUIgCWs3faOfTqCkVGcOFbvjB6xwMRKTRlDdq7Ya"          # 본인 값으로 변경
+secret = "25n7G6v6IBxbPu6rPOwJDhpohdYJVzKZsTxThhbi"          # 본인 값으로 변경
 upbit = pyupbit.Upbit(access, secret)
 
 a = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
