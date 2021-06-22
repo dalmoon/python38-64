@@ -13,8 +13,8 @@ d = 6000 # 6000원
 
 
 while True:
-    c = len(upbit.get_order("KRW-ETH")) #미체결 건 수
-    if 1 == c:
+    #c = len(upbit.get_order("KRW-ETH")) #미체결 건 수
+    if 1 == len(upbit.get_order("KRW-ETH")):
         if a == upbit.get_order("KRW-ETH")[0]["uuid"]:
             #print("a에 들어옴")
             upbit.cancel_order(a)
