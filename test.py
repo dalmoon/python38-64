@@ -9,7 +9,6 @@ upbit = pyupbit.Upbit(access, secret)
 
 a = upbit.get_order("KRW-ETH")[0]["uuid"] # 매수 UUID
 b = upbit.get_order("KRW-ETH")[1]["uuid"] # 매도 UUID
-d = 6000 # 6000원
 
 
 while True:
