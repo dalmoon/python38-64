@@ -1,8 +1,8 @@
 import pyupbit
 import time
 
-access = "0MYxw9xxsTSxUnq1w0PtbxS1JacuHMa5WrS78Dbd"
-secret = "MDsSEcUEdsxUH8dXpIqBNlCGffbPNeYVsoxwO4cp"
+access = ""
+secret = ""
 upbit = pyupbit.Upbit(access, secret)
 
 a = None
