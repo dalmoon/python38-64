@@ -1,5 +1,4 @@
 import pyupbit
-import time
 
 access = ""
 secret = ""
