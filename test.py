@@ -11,9 +11,9 @@ while True:
             b = upbit.get_order("KRW-ETH", state="done")[0]["uuid"]
             g = float(upbit.get_order(b)["trades"][0]["price"])
             e = round(g * 1.00266666667, -3)
-            h = 12018/g
+            h = 14250/g
             i = round(g / 1.00266666667, -3)
-            j = 12018/i
+            j = 14250/i
             upbit.sell_limit_order("KRW-ETH", e, h)
             upbit.buy_limit_order("KRW-ETH", i, j)
             upbit.cancel_order(a)
