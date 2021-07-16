@@ -7,7 +7,7 @@ upbit = pyupbit.Upbit(access, secret)
 while True:
     if 1 == len(upbit.get_order("KRW-ETH")):
         a = upbit.get_order("KRW-ETH")[0]["uuid"]
-        if a != upbit.get_order("KRW-ETH", state="done")[0]["uuid"] and 'bid' == upbit.get_order("KRW-ETH", state="done")[0]:
+        if a != upbit.get_order("KRW-ETH", state="done")[0]["uuid"] and 'bid' == upbit.get_order("KRW-ETH", state="done")[0]["side"]:
             b = upbit.get_order("KRW-ETH", state="done")[0]["uuid"]
             g = float(upbit.get_order(b)["trades"][0]["price"])
             e = round(g * 1.00266666667, -3)
