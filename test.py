@@ -13,7 +13,7 @@ while True:
             e = round(g * 1.00266666667, -3)
             h = 6000/g
             i = round(g / 1.00266666667, -3)
-            j = 14250/i
+            j = 15600/i
             upbit.sell_limit_order("KRW-BTC", e, h)
             upbit.buy_limit_order("KRW-BTC", i, j)
             upbit.cancel_order(a)
@@ -24,7 +24,7 @@ while True:
                         b = upbit.get_order("KRW-BTC", state="done")[0]["uuid"]
                         g = float(upbit.get_order(b)["trades"][0]["price"])
                         e = round(g * 1.00266666667, -3)
-                        h = 20250/g
+                        h = 21600/g
                         i = round(g / 1.00266666667, -3)
                         j = 14250/i
                         upbit.sell_limit_order("KRW-BTC", e, h)
