@@ -1,8 +1,8 @@
 import time
 import pyupbit
 
-access = ""
-secret = ""
+access = "0MYxw9xxsTSxUnq1w0PtbxS1JacuHMa5WrS78Dbd"
+secret = "MDsSEcUEdsxUH8dXpIqBNlCGffbPNeYVsoxwO4cp"
 upbit = pyupbit.Upbit(access, secret)
 
 while True:
@@ -28,4 +28,4 @@ while True:
             upbit.sell_limit_order("KRW-ETH", k, l)
             upbit.buy_limit_order("KRW-ETH", n, m)
             upbit.cancel_order(a)
-        time.sleep(0.00001)
+        time.sleep(0.0001)
