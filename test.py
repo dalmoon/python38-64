@@ -6,6 +6,7 @@ secret = ""
 upbit = pyupbit.Upbit(access, secret)
 
 while True:
+    time.sleep(0.0001)
     if 1 == len(upbit.get_order("KRW-ETH")):
         a = upbit.get_order("KRW-ETH")[0]["uuid"]
         if a != upbit.get_order("KRW-ETH", state="done")[0]["uuid"]:
@@ -28,4 +29,4 @@ while True:
             upbit.sell_limit_order("KRW-ETH", k, l)
             upbit.buy_limit_order("KRW-ETH", n, m)
             upbit.cancel_order(a)
-        time.sleep(0.001)
+        time.sleep(0.0001)
