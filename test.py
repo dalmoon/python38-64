@@ -18,6 +18,7 @@ while True:
             upbit.sell_limit_order("KRW-ETH", e, h)
             upbit.buy_limit_order("KRW-ETH", i, j)
             upbit.cancel_order(a)
+            time.sleep(0.250)
         elif a == upbit.get_order("KRW-ETH", state="done")[0]["uuid"]:
             b = upbit.get_order("KRW-ETH", state="done")[1]["uuid"]
             f = float(upbit.get_order(b)["trades"][0]["price"])
@@ -28,6 +29,6 @@ while True:
             upbit.sell_limit_order("KRW-ETH", k, l)
             upbit.buy_limit_order("KRW-ETH", n, m)
             upbit.cancel_order(a)
-        time.sleep(0.250)
+            time.sleep(0.250)
     else:
         time.sleep(0.034)
