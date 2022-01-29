@@ -29,4 +29,4 @@ while True:
             upbit.buy_limit_order("KRW-ETH", n, m)
             upbit.cancel_order(a)
         time.sleep(0.250)
-    time.sleep(0.034)
+    time.sleep(0.066)
