@@ -6,7 +6,7 @@ secret = ""
 upbit = pyupbit.Upbit(access, secret)
 
 while True:
-    time.sleep(0.500)
+    time.sleep(0.750)
     if 1 == len(upbit.get_order("KRW-ETH")):
         time.sleep(0.300)
         a = upbit.get_order("KRW-ETH")[0]["uuid"]
