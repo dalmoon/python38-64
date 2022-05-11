@@ -6,9 +6,9 @@ secret = ""
 upbit = pyupbit.Upbit(access, secret)
 
 while True:
-    time.sleep(7.000)
+    time.sleep(7.500)
     if 1 >= len(upbit.get_order("KRW-ETH")):
-        time.sleep(4.000)
+        time.sleep(4.500)
         a = upbit.get_order("KRW-ETH")[0]
         if a["side"] == 'bid':
             g = float(a["price"])
